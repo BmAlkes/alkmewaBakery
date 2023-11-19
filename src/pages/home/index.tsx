@@ -282,7 +282,7 @@ const Home = () => {
               <div className="relative mb-4 flex justify-between">
                 <p>Phone</p>
                 <a
-                  href={`https://api.whatsapp.com/send?phone=0547724271&text=Did you like your cakes and want to  talk with us for a order?`}
+                  href={`https://api.whatsapp.com/send?phone=9720547724271&text=Did you like your cakes and want to  talk with us for a order?`}
                 >
                   Whatsapp
                   <FaWhatsapp size={26} color="#aa7bc3" />
