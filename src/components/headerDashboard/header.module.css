@@ -1,0 +1,23 @@
+nav a {
+  background-image: linear-gradient(90deg, #aa7bc3, #aa7bc3);
+  background-repeat: no-repeat;
+  background-size: 0% 3px;
+  background-position: left bottom;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-size 500ms ease;
+}
+@media screen and (max-width: 768px) {
+  nav a {
+    display: none;
+  }
+}
+nav a:hover {
+  background-size: 100% 3px;
+  color: #aa7bc3;
+}
+
+div svg:hover {
+  color: #aa7bc3;
+  cursor: pointer;
+}
