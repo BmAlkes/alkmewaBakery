@@ -2,7 +2,7 @@ import sliceCake from "../../assets/american-heritage-chocolate-YQ9S0RU8LE8-unsp
 import cake1 from "../../assets/1.jpeg";
 import cake2 from "../../assets/2.jpeg";
 import cake3 from "../../assets/3.jpeg";
-import cake4 from "../../assets/4.jpeg";
+// import cake4 from "../../assets/4.jpeg";
 import cake5 from "../../assets/5.jpeg";
 import cake6 from "../../assets/6.jpeg";
 import cake7 from "../../assets/7.jpeg";
