@@ -7,7 +7,7 @@ import cake5 from "../../assets/5.jpeg";
 import cake6 from "../../assets/6.jpeg";
 import cake7 from "../../assets/7.jpeg";
 import { FaWhatsapp } from "react-icons/fa";
-import { Facebook, FacebookIcon, InstagramIcon } from "lucide-react";
+import { FacebookIcon, InstagramIcon } from "lucide-react";
 
 const Home = () => {
   return (
