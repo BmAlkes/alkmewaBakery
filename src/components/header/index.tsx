@@ -41,7 +41,6 @@ const Header = () => {
         <Link to="#cakes">Cakes</Link>
         <Link to="#new">New Arrivels</Link>
         <Link to="#about">About</Link>
-        <Link to="#review">Review</Link>
         <Link to="#contact">Contact</Link>
       </nav>
       <div className="flex gap-5">
