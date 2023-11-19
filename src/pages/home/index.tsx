@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <main className="w-full h-96 p-4 " id="home">
       <section className="text-gray-600 body-font">
-        <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+        <div className="container mx-auto flex px-5 py-8 items-center justify-center flex-col">
           <img
             className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
             alt="hero"
@@ -37,7 +37,7 @@ const Home = () => {
       </section>
 
       <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto flex flex-wrap">
+        <div className="container px-5 py-12 mx-auto flex flex-wrap">
           <div className="flex w-full mb-20 flex-wrap">
             <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">
               Our Cakes
