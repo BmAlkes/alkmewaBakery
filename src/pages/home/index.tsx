@@ -47,7 +47,7 @@ const Home = () => {
               Crafted with Precision and Passion, Transform Every Celebration
               into a Unforgettable Occasion. Explore the Pinnacle of Baking
               Excellence at{" "}
-              <span className="text-[#aa7bc3]"> Alkmewa Bakery</span>"
+              <span className="text-[#aa7bc3] text-2xl"> Alkmewa Bakery</span>"
             </p>
           </div>
           <div className="flex flex-wrap md:-m-2 -m-1">
