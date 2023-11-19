@@ -32,17 +32,17 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="flex items-center justify-between p-5">
+    <header className="flex items-center justify-between p-5 bg-white">
       <Link to="/">
         <img src={logoImg} alt="" className="w-40" />
       </Link>
       <nav className="flex gap-5 text-xl font-medium ">
-        <Link to="/home">Home</Link>
-        <Link to="/home">Cakes</Link>
-        <Link to="/home">New Arrivels</Link>
-        <Link to="/home">About</Link>
-        <Link to="/home">Review</Link>
-        <Link to="/home">Contact</Link>
+        <Link to="#home">Home</Link>
+        <Link to="#cakes">Cakes</Link>
+        <Link to="#new">New Arrivels</Link>
+        <Link to="#about">About</Link>
+        <Link to="#review">Review</Link>
+        <Link to="#contact">Contact</Link>
       </nav>
       <div className="flex gap-5">
         <div className="icons">
