@@ -7,11 +7,7 @@ nav a {
   text-decoration: none;
   transition: background-size 500ms ease;
 }
-@media screen and (max-width: 768px) {
-  nav a {
-    display: none;
-  }
-}
+
 nav a:hover {
   background-size: 100% 3px;
   color: #aa7bc3;
