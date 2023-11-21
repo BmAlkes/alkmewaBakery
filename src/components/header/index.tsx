@@ -13,6 +13,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "../ui/sheet";
+import i18n from "../../i18n";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -33,10 +34,15 @@ const Header = () => {
     };
   }, []);
 
+  const languageOptions = [
+    { name: "English", value: "en", flag: usaFlag },
+    { name: "Hebrew", value: "he", flag: hebFlag },
+  ];
+
   return (
     <header className="flex items-center justify-between p-5 bg-white w-full">
       <Link to="/">
-        <img src={logoImg} alt="" className="w-40" />
+        <img src={logoImg} alt="" className="lg:w-40 min-[350px]:w-20" />
       </Link>
       <nav className="flex gap-5 text-xl font-medium ">
         <a href="#home">Home</a>
@@ -47,12 +53,17 @@ const Header = () => {
       </nav>
       <div className="flex gap-5">
         <div className="flex ">
-          <div className="cursor-pointer">
-            <img src={hebFlag} alt="" />
-          </div>
-          <div className="cursor-pointer">
-            <img src={usaFlag} alt="" />
-          </div>
+          {languageOptions.map((language) => (
+            <button
+              key={language.value}
+              className="flags"
+              onClick={() => {
+                i18n.changeLanguage(language.value);
+              }}
+            >
+              <img src={language.flag} alt={language.name} />
+            </button>
+          ))}
         </div>
         {showMenu && (
           <div>

@@ -9,8 +9,10 @@ import cake7 from "../../assets/7.jpeg";
 import { FaWhatsapp } from "react-icons/fa";
 import { FacebookIcon, InstagramIcon } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
   return (
     <main className="w-full h-96  p-4 " id="home">
       <section className="text-gray-600 body-font">
@@ -22,18 +24,13 @@ const Home = () => {
           />
           <div className="text-center lg:w-2/3 w-full">
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-[##aa7bc3]">
-              Delicious Cake
+              {t("HeroTitle")}
             </h1>
-            <p className="mb-8 leading-relaxed">
-              "Experience the Artistry of Exceptional Baking: Where Every Crumb
-              Tells a Story of Pure Delight at Alkmewa Bakery. Indulge in
-              Handcrafted Perfection, Elevating Moments with Every Irresistible
-              Bite."
-            </p>
+            <p className="mb-8 leading-relaxed">{t("msgHero")}</p>
             <div className="flex justify-center">
               <Link to="/products">
                 <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                  More Products
+                  {t("HeroButton")}
                 </button>
               </Link>
             </div>
@@ -46,15 +43,12 @@ const Home = () => {
           <div className="flex w-full mb-20 flex-wrap">
             <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
               <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
-                Our Cakes
+                {t("secondTitle")}
               </h1>
               <div className="h-1 w-20 bg-indigo-500 rounded"></div>
             </div>
             <p className="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">
-              "Savor the Sweet Symphony of Elegance and Flavor: Our Cakes,
-              Crafted with Precision and Passion, Transform Every Celebration
-              into a Unforgettable Occasion. Explore the Pinnacle of Baking
-              Excellence at{" "}
+              {t("SecondMsg")}
               <span className="text-[#aa7bc3] text-2xl"> Alkmewa Bakery</span>"
             </p>
           </div>
@@ -113,15 +107,12 @@ const Home = () => {
           <div className="flex flex-wrap w-full mb-20">
             <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
               <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
-                New Arrivels
+                {t("ThreeTitle")}
               </h1>
               <div className="h-1 w-20 bg-indigo-500 rounded"></div>
             </div>
             <p className="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">
-              "Savor the Sweet Symphony of Elegance and Flavor: Our Cakes,
-              Crafted with Precision and Passion, Transform Every Celebration
-              into a Unforgettable Occasion. Explore the Pinnacle of Baking
-              Excellence at{" "}
+              {t("ThreeMsg")}
               <span className="text-[#aa7bc3] text-2xl"> Alkmewa Bakery</span>"
             </p>
           </div>
@@ -198,7 +189,7 @@ const Home = () => {
           <div className="flex w-full mb-20 flex-wrap">
             <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
               <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
-                About Us
+                {t("abouTitle")}
               </h1>
               <div className="h-1 w-20 bg-indigo-500 rounded"></div>
             </div>
@@ -212,40 +203,7 @@ const Home = () => {
               />
             </div>
             <p className=" mx-auto leading-relaxed text-base text-justify">
-              Welcome to Alkmewa Bakery, where the aroma of freshly baked
-              delights fills the air and each bite is a taste of pure
-              indulgence. At Alkmewa Bakery, we are passionate about crafting
-              artisanal baked goods that elevate the simple joy of sharing
-              delicious moments. Our story begins with a dedication to the art
-              of baking. Established 2023, Alkmewa Bakery has become a beloved
-              fixture in Ashkelon, known for our commitment to quality,
-              creativity, and exceptional customer experiences. We believe in
-              the magic of handcrafted recipes, using only the finest
-              ingredients to bring you a symphony of flavors and textures that
-              tantalize the taste buds. What sets us apart is our unwavering
-              commitment to freshness. Every morning, our skilled bakers rise
-              before the sun to create a tempting array of bread, pastries, and
-              confections from scratch. From the crispy crust of our artisanal
-              bread to the decadent layers of our signature cakes, each creation
-              is a testament to our dedication to perfection. At Alkmewa Bakery,
-              we embrace diversity in taste. Our menu boasts a diverse selection
-              to cater to all palates, from classic favorites that evoke
-              nostalgia to innovative treats that push the boundaries of
-              culinary delight. Whether you're seeking the comfort of a warm
-              croissant or the excitement of a new flavor experience, our bakery
-              is a haven for connoisseurs and casual snackers alike. We take
-              pride in being more than just a bakery; we are a community hub.
-              Our inviting ambiance welcomes you to savor the moment, whether
-              you're catching up with friends, celebrating milestones, or simply
-              treating yourself to a well-deserved treat. The smiles on our
-              customers' faces fuel our passion and inspire us to continually
-              raise the bar in the world of baked delights. Alkmewa Bakery is
-              not just a place to buy baked goods; it's a destination for
-              culinary bliss. Join us on a journey of taste and tradition, where
-              every bite tells a story of craftsmanship and care. Thank you for
-              making us a part of your moments – we look forward to delighting
-              your senses with the magic of Alkmewa Bakery. Indulge in the
-              extraordinary. Indulge with{" "}
+              {t("aboutus")}
               <span className="text-[#aa7bc3] text-2xl"> Alkmewa Bakery</span>"
             </p>
           </div>
@@ -256,7 +214,7 @@ const Home = () => {
         <div className="container px-5 py-24 mx-auto">
           <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
-              Contact Us
+              {t("contact")}
             </h1>
             <div className="h-1 w-20 bg-indigo-500 rounded"></div>
           </div>

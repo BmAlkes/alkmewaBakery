@@ -3,6 +3,8 @@ import Container from "../../components/container";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "../../services/firebase.config";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import i18n from "../../i18n";
 
 interface productProps {
   id: string;
@@ -27,6 +29,7 @@ interface ImagesProps {
 }
 
 const Products = () => {
+  const { t } = useTranslation();
   const [products, setProducts] = useState<productProps[]>([]);
 
   useEffect(() => {
@@ -66,11 +69,13 @@ const Products = () => {
     loadProducts();
   }, []);
 
+  const direction = i18n.dir();
+
   return (
     <section className="pt-12">
       <Container>
         <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
-          Our Products
+          {t("ourProducts")}
         </h1>
         <div className="h-1 w-20 bg-indigo-500 rounded"></div>
         <div className=" grid lg:grid-cols-3 sm:grid-cols-1 ">
@@ -88,25 +93,50 @@ const Products = () => {
                       <h1 className="title-font text-lg font-medium text-[#aa7bc3] mb-3">
                         {product.name}
                       </h1>
-                      <p className="leading-relaxed mb-3">
-                        {product.description}
-                      </p>
+                      {direction === "rtl" ? (
+                        <p className="leading-relaxed mb-3">
+                          {product.descriptionHebrew}
+                        </p>
+                      ) : (
+                        <p className="leading-relaxed mb-3">
+                          {product.description}
+                        </p>
+                      )}
+
                       <div className="flex items-center flex-wrap">
-                        <a className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
-                          See More
-                          <svg
-                            className="w-4 h-4 ml-2"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            fill="none"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          >
-                            <path d="M5 12h14"></path>
-                            <path d="M12 5l7 7-7 7"></path>
-                          </svg>
-                        </a>
+                        {direction === "rtl" ? (
+                          <a className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
+                            תראו עוד
+                            <svg
+                              className="w-4 h-4 ml-2"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path d="M5 12h10"></path>
+                              <path d="M12 30l7 7-7 7"></path>
+                            </svg>
+                          </a>
+                        ) : (
+                          <a className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
+                            See More
+                            <svg
+                              className="w-4 h-4 ml-2"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path d="M5 12h14"></path>
+                              <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                          </a>
+                        )}
                       </div>
                     </div>
                   </div>

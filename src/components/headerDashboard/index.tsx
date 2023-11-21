@@ -15,7 +15,7 @@ const HeaderDashboard = () => {
   return (
     <header className="flex items-center justify-between p-5 bg-white">
       <Link to="/">
-        <img src={logoImg} alt="" className="w-40" />
+        <img src={logoImg} alt="" />
       </Link>
       <nav className="flex gap-5 text-xl font-medium ">
         <Link to="/dashboard">Home</Link>

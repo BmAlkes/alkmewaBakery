@@ -12,6 +12,7 @@ import {
   DialogHeader,
   DialogTrigger,
 } from "../../components/ui/dialog";
+import i18n from "../../i18n";
 
 interface productProps {
   id: string;
@@ -94,6 +95,8 @@ const Product = () => {
 
   console.log(product);
 
+  const direction = i18n.dir();
+
   return (
     <Container>
       <div className="mt-10">
@@ -144,12 +147,30 @@ const Product = () => {
           </div>
           <div className="flex flex-col w-full gap-6 my-4">
             <div>
-              <p>Description</p>
-              <strong>{product.description}</strong>
+              {direction === "rtl" ? (
+                <>
+                  <p>תיאור</p>
+                  <strong>{product.descriptionHebrew}</strong>
+                </>
+              ) : (
+                <>
+                  <p>Description</p>
+                  <strong>{product.description}</strong>
+                </>
+              )}
             </div>
             <div>
-              <p>weight</p>
-              <strong>{product.weight}</strong>
+              {direction === "rtl" ? (
+                <>
+                  <p>משקל</p>
+                  <strong>{product.weight}</strong>
+                </>
+              ) : (
+                <>
+                  <p>weight</p>
+                  <strong>{product.weight}</strong>
+                </>
+              )}
             </div>
             <div>
               <p>Ingredients</p>

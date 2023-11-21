@@ -4,6 +4,7 @@ import App from "./App.tsx";
 import "./index.css";
 import { AuthProvider } from "./context/index.tsx";
 import { register } from "swiper/element/bundle";
+import "./i18n/index.ts";
 
 register();
 import "swiper/css";
