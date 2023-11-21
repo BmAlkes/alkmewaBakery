@@ -5,6 +5,9 @@
 body {
   background: #fef9ec;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 @layer base {
   :root {

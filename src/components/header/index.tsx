@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import logoImg from "../../assets/Alkmewa.png";
-import { FaBars, FaShoppingCart } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import "./header.module.css";
 import { useEffect, useState } from "react";
+import hebFlag from "../../assets/israel-48.png";
+import usaFlag from "../../assets/usa-48.png";
 import {
   Sheet,
   SheetContent,
@@ -32,22 +34,26 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="flex items-center justify-between p-5 bg-white">
+    <header className="flex items-center justify-between p-5 bg-white w-full">
       <Link to="/">
         <img src={logoImg} alt="" className="w-40" />
       </Link>
       <nav className="flex gap-5 text-xl font-medium ">
-        <Link to="#home">Home</Link>
-        <Link to="#cakes">Cakes</Link>
-        <Link to="#new">New Arrivels</Link>
-        <Link to="#about">About</Link>
-        <Link to="#contact">Contact</Link>
+        <a href="#home">Home</a>
+        <a href="#cakes">Cakes</a>
+        <a href="#new">New Arrivels</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </nav>
       <div className="flex gap-5">
-        <div className="icons">
-          <FaShoppingCart size={30} />
+        <div className="flex ">
+          <div className="cursor-pointer">
+            <img src={hebFlag} alt="" />
+          </div>
+          <div className="cursor-pointer">
+            <img src={usaFlag} alt="" />
+          </div>
         </div>
-
         {showMenu && (
           <div>
             <Sheet>
@@ -61,12 +67,11 @@ const Header = () => {
                   </SheetTitle>
                   <SheetDescription>
                     <div className="flex flex-col gap-3 mt-4 text-lg text-[#aa7bc3]">
-                      <Link to="/home">Home</Link>
-                      <Link to="/home">Cakes</Link>
-                      <Link to="/home">New Arrivels</Link>
-                      <Link to="/home">About</Link>
-                      <Link to="/home">Review</Link>
-                      <Link to="/home">Contact</Link>
+                      <a href="#home">Home</a>
+                      <a href="#cakes">Cakes</a>
+                      <a href="#new">New Arrivels</a>
+                      <a href="#about">About</a>
+                      <a href="#contact">Contact</a>
                     </div>
                   </SheetDescription>
                 </SheetHeader>

@@ -11,7 +11,7 @@ import { FacebookIcon, InstagramIcon } from "lucide-react";
 
 const Home = () => {
   return (
-    <main className="w-full h-96 p-4 " id="home">
+    <main className="w-full h-96  p-4 " id="home">
       <section className="text-gray-600 body-font">
         <div className="container mx-auto flex px-5 py-8 items-center justify-center flex-col">
           <img
@@ -38,7 +38,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 body-font " id="cakes">
         <div className="container px-5 py-12 mx-auto flex flex-wrap">
           <div className="flex w-full mb-20 flex-wrap">
             <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
@@ -105,7 +105,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 body-font" id="new">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap w-full mb-20">
             <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
@@ -190,7 +190,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section id="about">
         <div className="container px-5 py-12 mx-auto flex flex-wrap">
           <div className="flex w-full mb-20 flex-wrap">
             <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
@@ -249,7 +249,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="text-gray-600 body-font relative">
+      <section className="text-gray-600 body-font relative" id="contact">
         <div className="container px-5 py-24 mx-auto">
           <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">

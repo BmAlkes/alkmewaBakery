@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logoImg from "../../assets/Alkmewa.png";
 import Container from "../../components/container";
@@ -8,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import Input from "../../components/input";
 import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "../../services/firebase.config";
+import { AuthContext } from "../../context";
 
 const schema = z.object({
   email: z
@@ -29,7 +30,7 @@ const Login = () => {
     resolver: zodResolver(schema),
     mode: "onChange",
   });
-
+  const { handleInfoUser } = useContext(AuthContext);
   useEffect(() => {
     async function handleLogout() {
       await signOut(auth);
@@ -38,7 +39,12 @@ const Login = () => {
   }, []);
   const handleSubmitForm = async (data: FormData) => {
     await signInWithEmailAndPassword(auth, data.email, data.password)
-      .then(() => {
+      .then((user) => {
+        handleInfoUser({
+          name: user.user.displayName,
+          email: user.user.email,
+          uid: user.user.uid,
+        });
         navigate("/dashboard", { replace: true });
       })
       .catch((e) => {
