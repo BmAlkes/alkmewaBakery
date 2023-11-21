@@ -96,41 +96,43 @@ const Product = () => {
 
   return (
     <Container>
-      {product && (
-        <Swiper
-          slidesPerView={sliderPreview}
-          pagination={{ clickable: true }}
-          spaceBetween={20}
-          // navigation
-        >
-          {product?.images.map((image) => {
-            return (
-              <SwiperSlide key={image.name}>
-                <Dialog>
-                  <DialogTrigger>
-                    <img
-                      src={image.url}
-                      alt=""
-                      className="w-full h-96 object-cover"
-                    />
-                  </DialogTrigger>
-                  <DialogContent>
-                    <DialogHeader>
-                      <DialogDescription>
-                        <img
-                          src={image.url}
-                          alt=""
-                          className="w-full h-96 object-cover"
-                        />
-                      </DialogDescription>
-                    </DialogHeader>
-                  </DialogContent>
-                </Dialog>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      )}
+      <div className="mt-10">
+        {product && (
+          <Swiper
+            slidesPerView={sliderPreview}
+            pagination={{ clickable: true }}
+            spaceBetween={20}
+            // navigation
+          >
+            {product?.images.map((image) => {
+              return (
+                <SwiperSlide key={image.name}>
+                  <Dialog>
+                    <DialogTrigger>
+                      <img
+                        src={image.url}
+                        alt=""
+                        className="w-full h-96 object-cover"
+                      />
+                    </DialogTrigger>
+                    <DialogContent>
+                      <DialogHeader>
+                        <DialogDescription>
+                          <img
+                            src={image.url}
+                            alt=""
+                            className="w-full h-96 object-cover"
+                          />
+                        </DialogDescription>
+                      </DialogHeader>
+                    </DialogContent>
+                  </Dialog>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        )}
+      </div>
       {product && (
         <main className="w-full bg-white rounded-lg p-6 my-4">
           <div className="flex flex-col sm:flex-row mb-4 items-center justify-between">

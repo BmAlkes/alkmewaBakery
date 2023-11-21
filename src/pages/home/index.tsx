@@ -203,7 +203,7 @@ const Home = () => {
               <div className="h-1 w-20 bg-indigo-500 rounded"></div>
             </div>
           </div>
-          <div className="flex lg:flex-row sm:flex-col ">
+          <div className="flex lg:flex-row sm:flex-col">
             <div className="md:p-2 p-1 w-1/2 sm:w-full">
               <img
                 alt="gallery"
