@@ -203,15 +203,15 @@ const Home = () => {
               <div className="h-1 w-20 bg-indigo-500 rounded"></div>
             </div>
           </div>
-          <div className="flex lg:flex-row sm:flex-col">
-            <div className="md:p-2 p-1 w-1/2 sm:w-full">
+          <div className="grid lg:grid-cols-2  ">
+            <div className="md:p-2 p-1">
               <img
                 alt="gallery"
                 className="w-full object-cover h-full object-center block"
                 src={cake5}
               />
             </div>
-            <p className="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base text-center">
+            <p className=" mx-auto leading-relaxed text-base text-justify">
               Welcome to Alkmewa Bakery, where the aroma of freshly baked
               delights fills the air and each bite is a taste of pure
               indulgence. At Alkmewa Bakery, we are passionate about crafting
