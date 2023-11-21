@@ -5,6 +5,8 @@ import Layout from "./components/layout";
 import Dashboard from "./pages/dashboard";
 import RegisterNew from "./pages/dashboard/newProducts";
 import Private from "./routes/Private";
+import Products from "./pages/Products";
+import Product from "./pages/Product";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +15,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/products",
+        element: <Products />,
+      },
+      {
+        path: "/products/:id",
+        element: <Product />,
       },
     ],
   },

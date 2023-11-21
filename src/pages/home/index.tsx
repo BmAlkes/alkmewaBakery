@@ -8,6 +8,7 @@ import cake6 from "../../assets/6.jpeg";
 import cake7 from "../../assets/7.jpeg";
 import { FaWhatsapp } from "react-icons/fa";
 import { FacebookIcon, InstagramIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -30,9 +31,11 @@ const Home = () => {
               Bite."
             </p>
             <div className="flex justify-center">
-              <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                More Products
-              </button>
+              <Link to="/products">
+                <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                  More Products
+                </button>
+              </Link>
             </div>
           </div>
         </div>
